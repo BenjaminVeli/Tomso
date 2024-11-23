@@ -1,0 +1,58 @@
+body {
+  background: #111113;
+}
+
+.backend-dev {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #2C9D49;
+  text-underline-offset: 6px; 
+}
+
+.frontend-dev {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #2C49D8;
+  text-underline-offset: 6px; 
+}
+
+.database-dev {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F5A623;
+  text-underline-offset: 6px; 
+}
+
+.experience-container {
+  position: relative; /* Necesario para posicionar el ::before */
+  padding-left: 10px; /* Espacio para la línea */
+}
+
+.experience-container::after {
+    opacity: 0.4;
+    content: '';
+    width: 0;
+    height: 52%;
+    position: absolute;
+    background-color: #94a3b8;
+    border: 0.1px solid #94a3b8;
+    bottom: 22%;
+    left: 0px;
+}
+
+.experience-text::before {
+    content: "<h4>";
+    margin-bottom: 5px;
+    display: block;
+    margin-left: -30px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.experience-text::after {
+    content: "</h4>";
+    display: block;
+    margin-left: -28px;
+    font-size: 14px;
+    color: #94a3b8;
+  }
