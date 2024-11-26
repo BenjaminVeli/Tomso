@@ -1,17 +1,17 @@
 export const navLinks = [
-    { id: 1, href: "#inicio", name: "// inicio" },
-    { id: 2, href: "#especialidad", name: "// especialidad" },
-    { id: 3, href: "#destacado", name: "// destacado" },
-    { id: 4, href: "#experiencia", name: "// experiencia" },
-    { id: 5, href: "#contacto", name: "// contacto" },
+    { id: 1, to: "inicio", name: "// inicio" },
+    { id: 2, to: "especialidad", name: "// especialidad" },
+    { id: 3, to: "destacado", name: "// destacado" },
+    { id: 4, to: "experiencia", name: "// experiencia" },
+    { id: 5, to: "contacto", name: "// contacto" },
 ];
 
 export const myProjects = [
     {
       title: 'Exploratec - Landing Page',
-      desc: 'En esta landing page se presenta la plataforma Exploratec, que ofrece un recorrido 360° del campus sede de Lima en Tecsup. Además, se encontrarán diferentes secciones que brinden información sobre Exploratec y lo que se visualizará en el recorrido.',
+      desc: 'En esta landing page se presenta la plataforma Exploratec, que ofrece un recorrido 360° del campus sede de Lima en Tecsup. Además, se encontrarán diferentes secciones que brinden información.',
       subdesc:
-        'Esta interfaz fue desarrollada con React para la estructura, Tailwind CSS para los estilos, TypeScript para garantizar un código más robusto, y Framer Motion para animaciones fluidas al navegar entre las secciones.',
+        'Creado con React para la estructura, Tailwind CSS para los estilos, TypeScript para robustez, y Framer Motion para animaciones fluidas.',
       logo: '/assets/project-logo1.png',
       logoStyle: {
         backgroundColor: '#2A1816',
@@ -47,7 +47,7 @@ export const myProjects = [
       title: 'Exploratec - Web 360°',
       desc: 'En esta página se podrá realizar un recorrido 360° por el campus sede de Lima en Tecsup. A lo largo del recorrido, se encontrará información relevante sobre diversos puntos importantes del campus.',
       subdesc:
-        'Esta interfaz emplea Marzipano, una biblioteca de JavaScript diseñada para la creación de experiencias de navegación inmersiva en 360°. Está desarrollada utilizando HTML5 para la estructura, CSS3 para los estilos y JavaScript para implementar las funcionalidades y animaciones relacionadas con la navegación en 360°.',
+        'Creado con Marzipano, una biblioteca para recorridos en 360°, desarrollada con HTML5 para estructura, CSS3 para estilos y JavaScript para funcionalidades y animaciones.',
       logo: '/assets/project-logo2.png',
       logoStyle: {
         backgroundColor: '#13202F',
