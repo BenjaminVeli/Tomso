@@ -19,9 +19,9 @@ const Featured = () => {
   const currentProject = myProjects[selectedProjectIndex];
 
   return (
-    <section id="destacado" className="c-space py-28">
-      <div className="container mx-auto">
-        <h2 className="text-4xl md:text-6xl font-bold pb-12 text-white uppercase text-center">
+    <section id="destacado" className="py-28">
+      <div className="container mx-auto c-space">
+        <h2 className="text-4xl md:text-6xl font-bold pb-2 text-white uppercase text-center">
           Destacado
         </h2>
         <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
@@ -61,7 +61,8 @@ const Featured = () => {
             </div>
           </div>
           
-          <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+          <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full flex justify-center items-center">
+            <img src={currentProject.projectImg} alt="project" className="object-contain max-h-full max-w-full" />
             
           </div>
 
