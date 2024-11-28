@@ -1,15 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { navLinks } from "../constants/index.js";
-
-import Menu from "../assets/svg/bx-menu.svg";
-import MenuClose from "../assets/svg/bx-x.svg";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { BiX } from "react-icons/bi";
 
 const NavItems = ({ onClick }) => (
   <ul className="nav-ul group">
     {navLinks.map(({ id, to, name }) => (
       <li key={id} className="nav-li">
-        <Link to={to} smooth={true} className="cursor-pointer" duration={500} onClick={onClick}>
+        <Link
+          to={to}
+          smooth={true}
+          className="cursor-pointer"
+          duration={500}
+          onClick={onClick}
+        >
           {name}
         </Link>
       </li>
@@ -39,11 +44,11 @@ const Header = () => {
               className="lg:invisible flex"
               alt="Toggle menu"
             >
-              <img
-                src={isOpen ? MenuClose : Menu}
-                alt="MenuSvg"
-                className="h-6 w-6"
-              />
+              {isOpen ? (
+                <BiX className="h-6 w-6 text-white" />
+              ) : (
+                <HiOutlineMenuAlt3 className="h-6 w-6 text-white" />
+              )}
             </button>
           </div>
 

@@ -1,6 +1,6 @@
-import CodeBlock from "../assets/svg/bx-code-block.svg";
-import React from "../assets/svg/bxl-react.svg";
-import Database from "../assets/svg/bx-data.svg";
+import { FaReact } from "react-icons/fa";
+import { FiDatabase } from "react-icons/fi";
+import { BiCodeBlock } from "react-icons/bi";
 
 const Specialty = () => {
   return (
@@ -17,7 +17,7 @@ const Specialty = () => {
             >
               <div className="py-10 px-7">
                 <div className="flex items-center mb-2">
-                  <img src={d.img} alt={d.alt} className="w-11" />
+                  <d.img alt={d.alt} className="w-11 h-11 text-white" />
                   <h3
                     className={`${d.className} text-2xl font-semibold pl-4 text-white`}
                   >
@@ -45,7 +45,7 @@ const data = [
     id: 1,
     textH3: `Backend Developer`,
     textP: `Experiencia en lenguajes: Python, Java, Javascript , C# y TypeScript.`,
-    img: CodeBlock,
+    img: BiCodeBlock, // Aquí, guardamos el componente de React como img
     alt: `CodeBlock`,
     className: "backend-dev",
   },
@@ -53,7 +53,7 @@ const data = [
     id: 2,
     textH3: `Database Developer`,
     textP: `Experiencia en bases de datos: MySQL, SQL Server y MongoDB.`,
-    img: Database,
+    img: FiDatabase, // Guardamos el componente de React aquí también
     alt: `DatabaseImg`,
     className: "database-dev",
   },
@@ -61,7 +61,7 @@ const data = [
     id: 3,
     textH3: `Frontend Developer`,
     textP: `Apasionado por UX/UI. Más de 2 años de experiencia en desarrollo React.`,
-    img: React,
+    img: FaReact, // Guardamos el componente de React
     alt: `ReactImg`,
     className: "frontend-dev",
   },

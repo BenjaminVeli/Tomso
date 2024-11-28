@@ -2,7 +2,6 @@ import { motion, useMotionTemplate,useMotionValue,animate,} from "framer-motion"
 import { useEffect } from "react";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import ArrowDown from "../assets/svg/bx-down-arrow-alt.svg";
 import { Link } from "react-scroll";
 
 const colors = ["#13FDFAA", "#1E67C6", "#CE84CF", "DD335C"];
@@ -53,7 +52,7 @@ const Hero = () => {
           className="group relative flex items-center rounded-full bg-gray-950/10 text-gray-50 transition-colors hover:bg-gray-950/50"
         >
           <Link to="especialidad" smooth={true} className="cursor-pointer" duration={800}>
-            <img src={ArrowDown} alt="ArrowDown" className="px-4 py-2"/>
+            <img src="assets/svg/down-arrow.svg" alt="ArrowDown" className="px-4 py-2"/>
           </Link>
         </motion.button>
       </div>

@@ -1,6 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: #010103;
+  font-family: "Roboto mono", sans-serif;
+  width: 100dvw;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* --------------------- Styles of Tailwind --------------------- */
 
 @layer utilities {
   .tech-logo {
@@ -15,6 +31,26 @@
     @apply sm:px-10 px-5;
   }
 
+  .about-image {
+    @apply absolute left-1/2 top-0 z-20 h-[60vh] w-96 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[30vw];
+  }
+
+  .mask-clip-path {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .nav-ul {
+    @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
+  }
+  
+  .nav-li {
+    @apply text-white hover:text-blue-custom duration-500 font-medium;
+  }
+  
+  .nav-sidebar {
+    @apply absolute left-0 right-0 top-[4.8rem] bg-black backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
+  }
+
   .arrow-gradient {
     background-image: linear-gradient(
       to right,
@@ -24,4 +60,62 @@
       rgba(255, 255, 255, 0.025) 100%
     );
   }
+}
+
+
+/* --------------------- Styles of CSS3 --------------------- */
+
+
+.backend-dev {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #2c9d49;
+  text-underline-offset: 6px;
+}
+
+.frontend-dev {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #2c49d8;
+  text-underline-offset: 6px;
+}
+
+.database-dev {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #f5a623;
+  text-underline-offset: 6px;
+}
+
+.experience-container {
+  position: relative; /* Necesario para posicionar el ::before */
+  padding-left: 10px; /* Espacio para la línea */
+}
+
+.experience-container::after {
+  opacity: 0.4;
+  content: "";
+  width: 0;
+  height: 54%;
+  position: absolute;
+  background-color: #94a3b8;
+  border: 0.1px solid #94a3b8;
+  bottom: 21%;
+  left: 0px;
+}
+
+.experience-text::before {
+  content: "<h4>";
+  display: block;
+  margin-left: -30px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.experience-text::after {
+  content: "</h4>";
+  display: block;
+  margin-left: -28px;
+  font-size: 14px;
+  color: #94a3b8;
 }
