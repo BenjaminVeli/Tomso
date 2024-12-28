@@ -2,20 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #060606;
+}
+
+.footer-upper {
+  position: relative;
+}
+
+.footer-upper::after {
+  content: ""; /* Obligatorio para pseudo-elementos */
+  position: absolute;
+  top: 0; /* Alinea el pseudo-elemento al borde superior */
+  left: 0;
+  width: 100%; /* Ocupa el ancho completo */
+  height: 1px; /* Altura del "borde" */
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(43, 42, 42) 52.07%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
