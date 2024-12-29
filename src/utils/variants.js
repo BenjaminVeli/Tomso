@@ -51,7 +51,7 @@ export const cardVariants = {
             type: "tween",
             duration: 0.01,
             ease: "easeOut",
-            delay: custom * 0.10,
+            delay: custom * 0.07,
         }
     })
 };
