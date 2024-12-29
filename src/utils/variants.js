@@ -42,7 +42,7 @@ export const titleVariants = {
 export const cardVariants = {
     hidden: {
         opacity: 0,
-        y: 20,
+        y: 40,
     },
     show: (custom) => ({
         opacity: 1,
@@ -51,7 +51,7 @@ export const cardVariants = {
             type: "tween",
             duration: 0.01,
             ease: "easeOut",
-            delay: custom * 0.2,
+            delay: custom * 0.10,
         }
     })
 };
