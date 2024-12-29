@@ -9,7 +9,7 @@ export const Header = () => {
                 <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl">
                     <div>
                         <div className="h-10 w-10 inline-flex justify-center items-center">
-                            <a href="#">
+                            <a href="#" aria-label="Volver a la página de inicio">
                                 <LogoIcon className="h-8 w-8" />
                             </a>
                         </div>
