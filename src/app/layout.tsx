@@ -35,10 +35,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <meta name="author" content="Tomso" />
+      <meta name="robots" content="index" />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="es-ES" />
       <meta property="og:published_time" content="2024-12-28T10:30:00Z" />
       <meta property="og:updated_time" content="2024-12-28T10:45:00Z" />
+      <meta name="theme-color" content="#060606" />
 
       <body className={inter.className}>
         {children}

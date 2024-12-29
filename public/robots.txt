@@ -1,7 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-# Example: If you want to disallow crawling of a specific file or directory
-Disallow: /src/utils/
+# Host
+Host: https://tomso.vercel.app
 
-Sitemap: https://tomso.vercel.app/
+# Sitemaps
+Sitemap: https://tomso.vercel.app/sitemap.xml
