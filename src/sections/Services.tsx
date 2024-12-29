@@ -1,3 +1,7 @@
+"use client";
+import { motion } from 'framer-motion';
+import {  titleVariants } from '../utils/variants'; 
+
 import { Check } from "lucide-react";
 
 export const Services = () => {
@@ -24,7 +28,12 @@ export const Services = () => {
   return (
     <section id="services" className="py-20 md:py-24">
       <div className="container">
-        <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_right,white,white,rgb(32,32,138,.5))] text-transparent bg-clip-text">Servicios</h2>
+        <motion.h2
+        variants={titleVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="text-5xl md:text-6xl font-medium text-center tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_right,white,white,rgb(32,32,138,.5))] text-transparent bg-clip-text">Servicios</motion.h2>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {servicesList.map((service, index) => (

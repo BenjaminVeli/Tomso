@@ -1,3 +1,6 @@
+"use client";
+import { motion } from 'framer-motion';
+import {  HeroVariants } from '../utils/variants'; 
 import starsBg from '../assets/stars.png';
 
 export const Hero = () => {
@@ -26,8 +29,20 @@ export const Hero = () => {
       </div>
       {/* End Ring 3 */}
       <div className="container relative mt-6">
-        <h1 className="uppercase text-8xl md:text-[168px] md:leading-none font-semibold tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">Tomso</h1>
-        <p className="text-lg md:text-xl text-white/70 mt-5 text-center">¡Transforma tu presencia online con un diseño único y funcional!</p>
+        <motion.h1
+          variants={HeroVariants("left")}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="uppercase text-8xl md:text-[168px] md:leading-none font-semibold tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">
+          Tomso
+        </motion.h1>
+        <motion.p
+          variants={HeroVariants("up")}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="text-lg md:text-xl text-white/70 mt-5 text-center">¡Transforma tu presencia online con un diseño único y funcional!</motion.p>
       </div>
     </section>
   )

@@ -1,3 +1,7 @@
+"use client";
+import { motion } from 'framer-motion';
+import {  titleVariants } from '../utils/variants'; 
+
 import { Search } from "lucide-react";
 import { LetterText } from "lucide-react";
 import { MonitorSmartphone } from "lucide-react";
@@ -48,7 +52,12 @@ export const Process = () => {
   return (
     <section id="process" className="py-20 md:py-24">
       <div className="container">
-        <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_right,white,white,rgb(32,32,138,.5))] text-transparent bg-clip-text">¿Cómo trabajo?</h2>
+        <motion.h2 
+        variants={titleVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="text-5xl md:text-6xl font-medium text-center tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_right,white,white,rgb(32,32,138,.5))] text-transparent bg-clip-text">¿Cómo trabajo?</motion.h2>
         <p className="text-white/70 text-lg md:text-xl tracking-tight text-center mt-5 mb-10 md:mb-20">Te ofrezco un proceso claro, transparente y eficiente para garantizar que tu visión se haga realidad</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10">
 
