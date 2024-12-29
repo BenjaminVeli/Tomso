@@ -39,5 +39,21 @@ export const titleVariants = {
     }
 };
 
+export const cardVariants = {
+    hidden: {
+        opacity: 0,
+        y: 20,
+    },
+    show: (custom) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "tween",
+            duration: 0.01,
+            ease: "easeOut",
+            delay: custom * 0.2,
+        }
+    })
+};
 
 // <----------------------------------- PROCESS ----------------------------------->

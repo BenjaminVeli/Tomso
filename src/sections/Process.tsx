@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import {  titleVariants } from '../utils/variants'; 
+import {  titleVariants, cardVariants } from '../utils/variants'; 
 
 import { Search } from "lucide-react";
 import { LetterText } from "lucide-react";
@@ -61,14 +61,20 @@ export const Process = () => {
         <p className="text-white/70 text-lg md:text-xl tracking-tight text-center mt-5 mb-10 md:mb-20">Te ofrezco un proceso claro, transparente y eficiente para garantizar que tu visión se haga realidad</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10">
 
-          {processList.map((process) => (
-            <div key={process.id} className="p-6 border cursor-pointer transition-all duration-300 rounded-xl border-white/15 hover:border-white/25 bg-gray-dark">
+          {processList.map((process, index) => (
+            <motion.div
+            custom={index} 
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            key={process.id} className="p-6 border cursor-pointer transition-all duration-300 rounded-xl border-white/15 hover:border-white/25 bg-gray-dark">
               <div className="bg-neutral-900 h-11 w-11 border border-white/10 rounded-lg flex items-center justify-center">
                 <process.icon className="text-icon w-6 h-6" />
               </div>
               <h3 className="mt-6 text-2xl text-white">{process.title}</h3>
               <p className="mt-4 text-gray-300">{process.description}</p>
-            </div>
+            </motion.div>
           ))}
 
         </div>
