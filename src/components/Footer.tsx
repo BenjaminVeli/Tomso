@@ -31,20 +31,24 @@ export const Footer = () => {
             <div className="flex gap-5 items-center">
               <a href="https://github.com/BenjaminVeli"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Visita mi perfil de GitHub">
                 <Github className="cursor-pointer" />
               </a>
               <a href="https://www.tiktok.com/@tomso.js"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Visita mi perfil de TikTok">
                 <Tiktok className="cursor-pointer" />
               </a>
-              <a href="mailto:tomso.app@gmail.com">
+              <a href="mailto:tomso.app@gmail.com"
+                aria-label="Envíame un correo a tomso.app@gmail.com">
                 <Mail className="cursor-pointer" />
               </a>
               <a href="https://www.instagram.com/tomso.app/"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Visita mi perfil de Instagram">
                 <Instagram className="cursor-pointer" />
               </a>
             </div>
