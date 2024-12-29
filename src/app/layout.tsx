@@ -40,8 +40,12 @@ export default function RootLayout({
       <meta property="og:locale" content="es-ES" />
       <meta property="og:published_time" content="2024-12-28T10:30:00Z" />
       <meta property="og:updated_time" content="2024-12-28T10:45:00Z" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       <meta name="theme-color" content="#060606" />
-
+      <meta name="msapplication-TileColor" content="#2b5797" />
+      <link rel="apple-touch-icon" href="https://tomso.vercel.app/Tomso.png" />
+      <link rel="sitemap" type="application/xml" href="https://tomso.vercel.app/sitemap-0.xml" />
       <body className={inter.className}>
         {children}
       </body>
