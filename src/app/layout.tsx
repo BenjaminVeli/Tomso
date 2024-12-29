@@ -12,7 +12,14 @@ export const metadata: Metadata = {
     description: "Desarrollador de landing pages y sitios web optimizados para SEO, con experiencia en tecnologías actuales y enfoque en resultados.",
     url: 'https://tomso.vercel.app/',
     siteName: 'Tomso',
-    images: 'https://tomso.vercel.app/Tomso.png',
+    images: [
+      {
+        url: 'https://tomso.vercel.app/Tomso.png',
+        width: 300,
+        height: 300,
+        alt: 'Tomso Logo',
+      },
+    ],
   },
   alternates: {
     canonical: 'https://tomso.vercel.app/',
@@ -27,6 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <meta name="author" content="Tomso" />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="es-ES" />
       <meta property="og:published_time" content="2024-12-28T10:30:00Z" />
